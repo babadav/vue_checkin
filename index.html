@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="dist/css/app.css">
+	</head>
+	<body>
+
+		<div id="app">
+			<h1>Welcome to AcronymCon!</h1>
+			<ul>
+				<li v-for="person in people">
+					<h3>{{ person.name }}, {{person.email}}</h3>
+				</li>
+			</ul>
+			<h2>Check in</h2>
+			<input v-model="enteredEmail" placeholder="email"><p>{{enteredEmail}}</p>
+			<input v-model="enteredName" placeholder="name"><p>{{enteredName}}</p>
+		</div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="dist/js/app.js"></script>
+
+	</body>
+</html>
