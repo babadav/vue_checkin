@@ -5,22 +5,26 @@ var app = new Vue({
 	data: {
 		enteredName: '',
 		enteredEmail: '',
+		gravatar: 	'',
 		people: [
 			{
 				name: 'John Johnson',
-				email: 'johnson@johnsonandjohnson.com',
+				email: 'chris.silich@gmail.com',
+				hashedemail: md5('chris.silich@gmail.com'),
 				time: Date.now(),
 				since: 0, // number of minutes since person has checked in.
 			},
 			{
 				name: 'Fred Fredrickson',
-				email: 'fredrison@gmail.com',
+				email: 'shellyjames90@yahoo.com',
+				hashedemail: md5('shellyjames90@yahoo.com'),
 				time: Date.now(),
 				since: 0,
 			},
 			{
 				name: 'Brad Pitt',
 				email: 'brad@pitt.com',
+				hashedemail: md5('brad@pitt.com'),
 				time: Date.now(),
 				since: 0,
 			},
@@ -47,6 +51,7 @@ var app = new Vue({
 				{
 				name: this.enteredName,
 				email: this.enteredEmail,
+				hashedemail: md5(this.enteredEmail),
 				time: Date.now(),
 			});
 
@@ -56,11 +61,8 @@ var app = new Vue({
 
 			this.enteredEmail = ''
 			this.enteredName = ''
-		}
-
-	}
+		},
 })
-
 
 
 
